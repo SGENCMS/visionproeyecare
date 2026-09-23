@@ -18,7 +18,7 @@ This is **not** a pixel-faithful clone. It is a commissioned redesign:
 
 | | |
 | --- | --- |
-| **Content, imagery, branding, contact details, URLs** | All from `visionproeyecare.com`. No page copy was written: every sentence of body text is the practice's own. The redesign adds only interface text: menu-group labels, section labels such as "Related eye care" and "On this page", and descriptive alt text for the practice's photographs. Where a label touches a fact ("Spring, TX", "An independent practice"), the fact is the live site's own. |
+| **Content, imagery, branding, contact details, URLs** | All from `visionproeyecare.com`, except five decorative AI-generated product images (see *Known limits*). No page copy was written: every sentence of body text comes from the practice's live site. Some of it, such as the contact-lens product descriptions, is manufacturer copy the practice republished. The redesign adds only interface text: menu-group labels, section labels such as "Related eye care" and "On this page", and descriptive alt text for the practice's photographs. Where a label touches a fact ("Spring, TX", "An independent practice"), the fact is the live site's own. |
 | **Navigation model and page anatomy** | Modelled on `eyetrendsclearlake.com`: a top bar, a Services mega-menu grouped into care clusters, an Eyewear mega-menu with four featured categories, and a persistent *Book* call to action. **No content or asset came from that site.** |
 | **Visual design** | New. It is the "Clear Focus" system, built on Vision Pro's own measured brand blue `#0e6ba4` and gold `#f9d446`. |
 | **Platform** | Removed: no WordPress, no EyeCarePro theme, no Gravity Forms, no Google Tag Manager, no trackers. |
@@ -85,9 +85,9 @@ re-read from this tree as published.
    The registration form collects health information, and on a public URL nobody should believe
    they submitted it. Site search still works.
 5. `<meta name="referrer" content="no-referrer">`, so outbound clicks don't reveal this URL to
-   third parties. The one exception is the YouTube video frame: YouTube refuses to play without
-   a referrer (player Error 153), so that frame alone sends the bare origin
-   (`https://sgencms.github.io/`), never a path.
+   third parties. The only exceptions are the YouTube video frames (`/eye-care-services/eye-emergencies-pink-red-eyes/` and `/our-eye-doctors/`). YouTube
+   refuses to play without a referrer (player Error 153), so those frames alone send the bare
+   origin (`https://sgencms.github.io/`), never a path.
 6. A **rendered disclosure banner** on every page.
 7. `sitemap.xml` and `llms.txt` are not shipped, because both advertise the practice's real
    URLs and invite crawlers. The Netlify-only `_headers` / `_redirects` are not shipped either,
@@ -109,9 +109,9 @@ re-read from this tree as published.
   (`scheduleyourexam.com`), the patient history form (`crystalpm.com`), contact-lens reorders
   (`meetmarlo.com`) and payments (`square.link`). Navigation is not blocked, and `no-referrer`
   keeps this URL out of the request.
-- **3 pages load a third-party frame** when viewed: www.youtube-nocookie.com on `/eye-care-services/eye-emergencies-pink-red-eyes/`; maps.google.com on `/hours-location/` and `/location/vision-pro/`. Nothing else leaves the page, because fonts, images, scripts and styles are all self-hosted.
+- **4 pages load a third-party frame** when viewed: www.youtube-nocookie.com on `/eye-care-services/eye-emergencies-pink-red-eyes/` and `/our-eye-doctors/`; maps.google.com on `/hours-location/` and `/location/vision-pro/`. Nothing else leaves the page, because fonts, images, scripts and styles are all self-hosted.
 - **27 images were refused (HTTP 403)**: 26 by the live site's image CDN (`da4e1j5r7gw87.cloudfront.net`) and 1 by the old web vendor's server (`www.eyecarepro.net`, a background image in its theme stylesheet). The pipeline does not retry past a refusal. Each placement uses another image instead (one of Vision Pro's own, or a generated product image as a page hero), or none, inside article text. The practice can supply the originals.
-- **5 decorative product images are AI-generated** (fal.ai FLUX [dev]): `eyewear-contacts`, `eyewear-frames`, `eyewear-kids`, `eyewear-sunglasses` and `frames-flatlay`. They appear in the four eyewear category tiles, in the eyewear mega-menu and as the page hero on `/benefits-of-prescription-sunglasses-for-everyday-eye-protection/`, `/contact-lenses/` and `/eyeglasses/`. That includes a blog post whose own photograph was refused by the CDN. Each shows only eyewear or a lens case, with no person, no premises, no brand and no result. They live under `assets/img/generated/` so they can be identified as generated.
+- **5 decorative product images are AI-generated** (fal.ai FLUX [dev]): `eyewear-contacts`, `eyewear-frames`, `eyewear-kids`, `eyewear-sunglasses` and `frames-flatlay`. They appear in the four eyewear category tiles, in the eyewear mega-menu and as the page hero on `/benefits-of-prescription-sunglasses-for-everyday-eye-protection/`, `/contact-lenses/` and `/eyeglasses/`. That includes a blog post whose own photograph was refused by the CDN. Each shows eyewear or contact-lens care items. None shows a person, the practice or its premises, a readable brand, or a clinical result; a few frames carry garbled, illegible pseudo-lettering. What each one shows, checked by eye, is listed in the handoff `CHANGE-LOG.md`. They live under `assets/img/generated/` so they can be identified as generated.
 - **The live site contradicts itself, and the rebuild reproduces each conflict rather than
   choosing a side.** Some examples:
   - Two street numbers: 20920 on every page and on the storefront door, 20290 in a home-page
@@ -128,11 +128,18 @@ re-read from this tree as published.
 
 This repository is an unaffiliated development artifact and asserts no rights over any of its
 content.
-- The site content, the practice's photography and the Vision Pro name and logo belong to Vision
+- The practice's own writing, its photography and the Vision Pro name and logo belong to Vision
   Pro.
-- The contact-lens and eyewear product images, and the Systane iLux patient-education video, are
-  the manufacturers' own, as the practice's site republished them. Their trademarks (ACUVUE,
-  Alcon, Bausch + Lomb, CooperVision, Latisse, Systane and others) belong to their owners.
+- The practice's site also republished third-party material, and this copy carries it as found.
+  The owners' rights remain theirs:
+  - product descriptions and images supplied by contact-lens and eyewear manufacturers;
+  - the Systane iLux patient-education video;
+  - two embedded YouTube videos;
+  - the logos of the insurance plans it accepts (United Healthcare, Blue Cross Blue Shield, Cigna,
+    Humana, Medicare, VSP and others).
+
+  The trademarks among them (ACUVUE, Alcon, Bausch + Lomb, CooperVision, Latisse, Systane and
+  others) belong to their owners.
 - The decorative images under `assets/img/generated/` were generated for this redesign.
 - The typefaces are Plus Jakarta Sans (SIL Open Font License 1.1) and Instrument Serif (SIL OFL
   1.1), both self-hosted.

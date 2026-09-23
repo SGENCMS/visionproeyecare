@@ -20,7 +20,7 @@
     "formNoticesAdded": 2,
     "bannersAdded": 159,
     "mapKeysRemoved": 2,
-    "youtubeOriginReferrer": 1,
+    "youtubeOriginReferrer": 2,
     "crlfPagesNormalised": 159,
     "filesNotShipped": [
       "llms.txt",
@@ -45,7 +45,7 @@
       "ogDescDisclosure": 159,
       "noOgImage": 159,
       "lfOnly": 159,
-      "iframesChecked": 3,
+      "iframesChecked": 4,
       "patientFormsNoSubmitControl": 2,
       "formsTotal": 318,
       "formsInert": 318,
@@ -62,13 +62,16 @@
         ".gitignore",
         ".nojekyll",
         "PROVENANCE.json",
+        "PROVENANCE.md",
+        "README.md",
         "robots.txt",
         "styles/preview-banner.css"
       ]
     },
     "secrets": {
-      "scanned": 171,
-      "hits": 0
+      "scanned": 173,
+      "hits": 0,
+      "note": "final tree, docs included; asserted by the post-write re-check"
     },
     "references": {
       "checked": 24016,
@@ -97,7 +100,7 @@
       "overflow390": 0,
       "bannerHidden": 0,
       "browserCancelled": [
-        "the-staff/@390 Image"
+        "website-accessibility-policy/@390 Image assets/img/vision-pro-logo-480.webp"
       ],
       "deep404": [
         {
@@ -200,7 +203,8 @@
     },
     "thirdPartyFrames": {
       "www.youtube-nocookie.com": [
-        "/eye-care-services/eye-emergencies-pink-red-eyes/"
+        "/eye-care-services/eye-emergencies-pink-red-eyes/",
+        "/our-eye-doctors/"
       ],
       "maps.google.com": [
         "/hours-location/",
