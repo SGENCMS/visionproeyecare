@@ -1,5 +1,7 @@
 /* preview-banner.css — present ONLY in the public preview, never in the handoff build. */
-[data-preview-banner]{position:relative;z-index:200;background:#0a1f30;color:rgba(255,255,255,.94);font:400 0.8125rem/1.5 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:0.6rem 1rem;letter-spacing:0.01em}
+/* In normal flow above the header, so it never needs to cover anything: z-index 1 keeps it under the
+   focused skip link (100), the sticky header (50), the mega-menus (60) and the mobile drawer (80). */
+[data-preview-banner]{position:relative;z-index:1;background:#0a1f30;color:rgba(255,255,255,.94);font:400 0.8125rem/1.5 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:0.6rem 1rem;letter-spacing:0.01em}
 [data-preview-banner] strong{font-weight:700;color:#f9d446}
 [data-preview-banner] a{color:#fff;text-decoration:underline;text-underline-offset:2px;display:inline-flex;align-items:center;min-height:44px;padding:0 .25rem}
 @media (min-width:835px){[data-preview-banner] a{min-height:0}}
@@ -7,3 +9,5 @@
 [data-preview-formnotice]{border:2px solid #a3261b;background:#fff5f4;color:#12202a;padding:1rem 1.15rem;border-radius:12px;margin:0 0 1.5rem;font:400 0.9375rem/1.6 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
 [data-preview-formnotice] strong{display:block;margin-bottom:0.25rem;font-weight:700;color:#a3261b}
 [data-preview-formnotice] a{color:#7d1c14}
+/* the patient forms' submit control is disabled in the preview: it must look it */
+form[data-preview="inert"] button[disabled]{opacity:.45;cursor:not-allowed;box-shadow:none;filter:grayscale(.6)}

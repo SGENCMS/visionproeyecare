@@ -12,12 +12,16 @@
     "ogDescriptionReplaced": 159,
     "ogImageRemoved": 157,
     "twitterImageRemoved": 157,
+    "ogFeaturedImageRemoved": 66,
     "jsonLdRemoved": 1138,
     "formsMarkedInert": 318,
     "patientFormsNeutralised": 2,
+    "patientSubmitButtonsDisabled": 2,
     "formNoticesAdded": 2,
     "bannersAdded": 159,
     "mapKeysRemoved": 2,
+    "youtubeOriginReferrer": 1,
+    "crlfPagesNormalised": 159,
     "filesNotShipped": [
       "llms.txt",
       "sitemap.xml",
@@ -27,6 +31,7 @@
   },
   "verification": {
     "tool": "src/tools/preview-verify.mjs (handoff build)",
+    "servedAs": "local GitHub Pages emulation under /visionproeyecare/ (src/tools/preview-serve.mjs)",
     "verdict": "PASS",
     "pages": 159,
     "hardening": {
@@ -39,6 +44,9 @@
       "ogUrlPreview": 159,
       "ogDescDisclosure": 159,
       "noOgImage": 159,
+      "lfOnly": 159,
+      "iframesChecked": 3,
+      "patientFormsNoSubmitControl": 2,
       "formsTotal": 318,
       "formsInert": 318,
       "patientForms": 2,
@@ -98,7 +106,7 @@
           "subresourceFailures": [],
           "broken": [],
           "banner": true,
-          "cssRules": 504
+          "cssRules": 505
         },
         {
           "path": "a/b/c/d/no-such-page",
@@ -106,7 +114,7 @@
           "subresourceFailures": [],
           "broken": [],
           "banner": true,
-          "cssRules": 504
+          "cssRules": 505
         },
         {
           "path": "eye-care-services/nope/",
@@ -114,20 +122,20 @@
           "subresourceFailures": [],
           "broken": [],
           "banner": true,
-          "cssRules": 504
+          "cssRules": 505
         }
       ],
       "search": {
         "results": 18,
         "outside": [],
         "sample": [
-          "http://127.0.0.1:8920/visionproeyecare/advanced-dry-eye-treatments-with-blephex-ilux/",
-          "http://127.0.0.1:8920/visionproeyecare/autoimmune-disease-and-dry-eye-2023/",
-          "http://127.0.0.1:8920/visionproeyecare/best-worst-foods-for-dry-eye-relief/"
+          "/visionproeyecare/advanced-dry-eye-treatments-with-blephex-ilux/",
+          "/visionproeyecare/autoimmune-disease-and-dry-eye-2023/",
+          "/visionproeyecare/best-worst-foods-for-dry-eye-relief/"
         ],
         "firstResultStatus": 200
       },
-      "patientForms": [
+      "patientFormsJsOn": [
         {
           "route": "contact-us/appointment-request-form/",
           "prevented": true,
@@ -143,6 +151,50 @@
           "action": "",
           "notice": true,
           "requestsAfterSubmit": []
+        }
+      ],
+      "patientFormsJsOff": [
+        {
+          "route": "contact-us/appointment-request-form/",
+          "negative": {
+            "enterAndClickRequests": 0,
+            "enter": {
+              "requests": [],
+              "stayed": true
+            },
+            "click": {
+              "requests": [],
+              "stayed": true,
+              "clickHitButton": true
+            }
+          },
+          "control": {
+            "requestsCaught": [
+              "POST /visionproeyecare/contact-us/appointment-request-form/"
+            ],
+            "clickHitButton": true
+          }
+        },
+        {
+          "route": "contact-us/patient-registration-form/",
+          "negative": {
+            "enterAndClickRequests": 0,
+            "enter": {
+              "requests": [],
+              "stayed": true
+            },
+            "click": {
+              "requests": [],
+              "stayed": true,
+              "clickHitButton": true
+            }
+          },
+          "control": {
+            "requestsCaught": [
+              "POST /visionproeyecare/contact-us/patient-registration-form/"
+            ],
+            "clickHitButton": true
+          }
         }
       ]
     },
