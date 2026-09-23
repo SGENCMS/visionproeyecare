@@ -1,0 +1,6 @@
+/* preview.css — present ONLY in the public preview, never in the handoff build. */
+[data-preview-formnotice]{border:2px solid #a3261b;background:#fff5f4;color:#12202a;padding:1rem 1.15rem;border-radius:12px;margin:0 0 1.5rem;font:400 0.9375rem/1.6 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+[data-preview-formnotice] strong{display:block;margin-bottom:0.25rem;font-weight:700;color:#a3261b}
+[data-preview-formnotice] a{color:#7d1c14}
+/* the patient forms' submit control is disabled in the preview: it must look it */
+form[data-preview="inert"] button[disabled]{opacity:.45;cursor:not-allowed;box-shadow:none;filter:grayscale(.6)}

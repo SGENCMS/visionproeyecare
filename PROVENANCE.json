@@ -18,7 +18,7 @@
     "patientFormsNeutralised": 2,
     "patientSubmitButtonsDisabled": 2,
     "formNoticesAdded": 2,
-    "bannersAdded": 159,
+    "previewStylesLinked": 159,
     "mapKeysRemoved": 2,
     "youtubeOriginReferrer": 2,
     "crlfPagesNormalised": 159,
@@ -38,8 +38,8 @@
       "robotsNoindex": 159,
       "referrer": 159,
       "noJsonLd": 159,
-      "banner": 159,
-      "bannerStyles": 159,
+      "noBanner": 159,
+      "previewStyles": 159,
       "canonicalReal": 159,
       "ogUrlPreview": 159,
       "ogDescDisclosure": 159,
@@ -65,7 +65,7 @@
         "PROVENANCE.md",
         "README.md",
         "robots.txt",
-        "styles/preview-banner.css"
+        "styles/preview.css"
       ]
     },
     "secrets": {
@@ -98,9 +98,9 @@
       "consoleErrors": 0,
       "outsidePrefix": 0,
       "overflow390": 0,
-      "bannerHidden": 0,
+      "bannerShown": 0,
       "browserCancelled": [
-        "website-accessibility-policy/@390 Image assets/img/vision-pro-logo-480.webp"
+        "the-staff/@390 Image assets/img/vision-pro-logo-480.webp"
       ],
       "deep404": [
         {
@@ -108,24 +108,24 @@
           "status": 404,
           "subresourceFailures": [],
           "broken": [],
-          "banner": true,
-          "cssRules": 505
+          "banner": false,
+          "cssRules": 500
         },
         {
           "path": "a/b/c/d/no-such-page",
           "status": 404,
           "subresourceFailures": [],
           "broken": [],
-          "banner": true,
-          "cssRules": 505
+          "banner": false,
+          "cssRules": 500
         },
         {
           "path": "eye-care-services/nope/",
           "status": 404,
           "subresourceFailures": [],
           "broken": [],
-          "banner": true,
-          "cssRules": 505
+          "banner": false,
+          "cssRules": 500
         }
       ],
       "search": {

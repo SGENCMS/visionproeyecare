@@ -24,7 +24,7 @@ This is **not** a pixel-faithful clone. It is a commissioned redesign:
 | **Platform** | Removed: no WordPress, no EyeCarePro theme, no Gravity Forms, no Google Tag Manager, no trackers. |
 
 Because this is a redesign rather than a clone, matching the old design pixel for pixel is not
-a goal. That is why this preview can carry a **rendered disclosure banner** on every page.
+a goal.
 
 ## Verification
 
@@ -88,7 +88,10 @@ re-read from this tree as published.
    third parties. The only exceptions are the YouTube video frames (`/eye-care-services/eye-emergencies-pink-red-eyes/` and `/our-eye-doctors/`). YouTube
    refuses to play without a referrer (player Error 153), so those frames alone send the bare
    origin (`https://sgencms.github.io/`), never a path.
-6. A **rendered disclosure banner** on every page.
+6. **No on-page disclosure banner.** One was shown on every page until 2026-09-24, when it was
+   withdrawn at the operator's request. The disclosure is still carried by `noindex`, by
+   `og:description` / `twitter:description` (a pasted link unfurls as the disclosure), by the
+   notice on each patient form, and by this README.
 7. `sitemap.xml` and `llms.txt` are not shipped, because both advertise the practice's real
    URLs and invite crawlers. The Netlify-only `_headers` / `_redirects` are not shipped either,
    since GitHub Pages ignores them.

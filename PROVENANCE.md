@@ -43,12 +43,12 @@ The "Rendered?" column says whether the change can affect what is painted on the
 | --- | --- | --- | --- |
 | 1 | `robots` set to `noindex, nofollow, noarchive, nosnippet`. The build shipped `max-image-preview:large` (indexable) on 146 pages and `noindex, follow` on 13. **This is the effective index control**; see #9. | 159 | No |
 | 2 | `<meta name="referrer" content="no-referrer">` inserted. On its own it stopped the YouTube player (Error 153); #14 exempts the YouTube frames. | 159 | Only via the video, fixed by #14 |
-| 3 | `<title>` **not** prefixed. This follows the org's standing rule; the prefix was withdrawn from the urbanoptics preview on 2026-09-22. The banner, `og:description` and `noindex` carry the disclosure instead. | — | — |
+| 3 | `<title>` **not** prefixed. This follows the org's standing rule; the prefix was withdrawn from the urbanoptics preview on 2026-09-22. `og:description`, `noindex` and the form notices carry the disclosure instead (see #8). | — | — |
 | 4 | `og:url` repointed at this preview; `og:description` and `twitter:description` replaced with the disclosure. `og:image` / `twitter:image` removed, and so is the old theme's non-standard `og:featured_image` (66 pages), so no image-bearing meta remains. | 159 | No |
 | 5 | `schema.org` JSON-LD removed (1,138 blocks). It asserted the practice's identity, address, telephone and opening hours. | 159 | No |
 | 6 | Every `<form>` marked `data-preview="inert"`. The two patient forms also get `action=""` and `onsubmit="return false"`, and each **submit button becomes a disabled `type="button"`**. Without that last step, a browser with JavaScript off still posted every field, as an adversarial review found; see *Review after the first publish*. | 318 forms | **Yes** (button shown disabled) |
 | 7 | A visible notice above each patient form: "This form is disabled in this preview", followed by the practice's real booking link and phone number from the build's sourced config | 2 | **Yes** |
-| 8 | A rendered disclosure banner inserted as the first child of `<body>` (after the skip link), with its own stylesheet, `styles/preview-banner.css`. It sits at `z-index: 1`, so it never covers the skip link, header, menus or drawer. | 159 | **Yes** |
+| 8 | **No rendered disclosure banner.** Earlier publishes carried one on every page, directly after the skip link. It was withdrawn at the operator's request on 2026-09-24, and the verifier now fails any page that still carries its element or its wording. The preview stylesheet, `styles/preview.css` (formerly `preview-banner.css`), stays linked on every page for the form notices and disabled buttons (#6, #7). | 159 | **Yes** (the banner is gone) |
 | 9 | `robots.txt` replaced with `Disallow: /`. **It has no effect here**, because crawlers read only `https://sgencms.github.io/robots.txt` (the host root, a 404 for this org) and never a project subpath. GitHub Pages cannot send `X-Robots-Tag`, so non-HTML files (PDF, images, JSON, the markdown) have no index control. The file is kept only in case this tree is ever served from a domain root. | — | No |
 | 10 | `sitemap.xml` and `llms.txt` not shipped, because both advertise the practice's real URLs. `_headers` and `_redirects` are Netlify-only and GitHub Pages ignores them. | — | No |
 | 11 | `404.html` rewritten to absolute `/visionproeyecare/` references. GitHub Pages answers a missing path at any depth with it, so it is the one page that cannot use relative references. | 1 | Yes |
@@ -83,7 +83,7 @@ with the practice or its web vendor on its own merits.
 | `<link rel="canonical">` → the practice's own URL, on every page | Correct for a duplicate, and deliberately different from `og:url`, which drives unfurl cards |
 | The live site's internal contradictions: two street numbers (20290 appears in a home-page sentence and in one blog post's "Address:" line), two phone numbers, a post titled "Spring, CO" that links to a Colorado practice, and empty template tokens on the Stellest and scleral-lens pages and in one `<title>` | These are the practice's own words, so choosing between them is the practice's call. All of them are listed in the handoff `CHANGE-LOG.md`. One of the gaps sits in the scleral page's meta description. The build never reuses that text as a card summary, hero lead or search snippet, so it stays in that page's `<head>` and is not shown on other pages. |
 | Outbound links to `scheduleyourexam.com`, `crystalpm.com`, `meetmarlo.com` and `square.link` | These are the practice's real booking, history-form, contact-lens and payment services. Navigation is not blocked, and `no-referrer` keeps this URL out of the request. |
-| `site.css`, `tokens.css`, `motion.css`, `scripts/site.js` and every other non-HTML file except the named preview additions | Byte-identical to the handoff build; `preview-verify.mjs` compares them. The banner and notice styles live only in `preview-banner.css`. |
+| `site.css`, `tokens.css`, `motion.css`, `scripts/site.js` and every other non-HTML file except the named preview additions | Byte-identical to the handoff build; `preview-verify.mjs` compares them. The notice and disabled-button styles live only in `preview.css`. |
 
 ## Not published here
 
@@ -111,7 +111,7 @@ reproduced independently before it was fixed:
 | The rebuild **reused the scleral page's gap-bearing meta description** ("Located in , we offer…") as card text on two other pages, and as that page's search-result snippet | Fixed in the handoff build: a description with an unfilled template token is never reused as visible text (card summary, hero lead or search snippet) |
 | Documentation errors: the AI-image count and placement, the sweep result ("0 findings" instead of 0 blocker / 0 major, 12 minor, 4 nit), the 403 image hosts, a second 20290 address, undercounted template gaps, and an overstated "nothing written" | Corrected here, in README.md and in the handoff `CHANGE-LOG.md` / `README.md`. The audit figures in both files are now filled from the audit files rather than typed. |
 | **The banner covered controls.** Its `z-index: 200` (carried over from the org's urbanoptics banner) painted it over the **focused skip link** at every width and over the **mobile drawer's close button**. The review's rendering lens stalled and never reported, so a direct browser pass found this one. | The banner is in normal flow above the header and never needs to cover anything, so it now sits at `z-index: 1`, under the skip link (100), header (50), menus (60) and drawer (80). The verifier hit-tests both controls at their centres. The check fails on the first publish's CSS and passes on this one. |
-| The disabled Submit button still looked active (full colour, pointer cursor) | `preview-banner.css` renders it visibly disabled |
+| The disabled Submit button still looked active (full colour, pointer cursor) | The preview stylesheet (then `preview-banner.css`, now `preview.css`) renders it visibly disabled |
 | The old theme's `og:featured_image` survived on 66 pages | Removed (#4). It is not an Open Graph property that unfurlers read, and its URL is not an image, but no image-bearing meta should remain. |
 | The recorded verification had run **before** README.md and PROVENANCE.md existed | `preview-docs.mjs` now re-runs the static checks over the finished tree after writing these files, and refuses to finish unless they pass |
 
@@ -137,6 +137,15 @@ It confirmed these defects, all now fixed:
 | A second empty template token on the Stellest page ("in the  area") was missing from the change log | Listed |
 | The cancelled-request note gave a typed explanation | The verifier now records the URL, and the docs report only what was measured |
 
+## Banner withdrawn — 2026-09-24
+
+At the operator's request, the rendered banner ("Unofficial redesign preview. Not affiliated with
+Vision Pro. Visit the real site") was removed from every page (deviation #8). Nothing else changed:
+`noindex`, the disclosure in `og:description` / `twitter:description`, the inert patient forms and
+their notices, the canonical and every other deviation above are as before. The verifier's banner
+check was inverted to require absence. The skip-link and drawer hit-tests stay, now asserting that
+nothing covers those controls.
+
 ## Verification after modification
 
 Every figure below was re-read by `src/tools/preview-verify.mjs` (in the handoff build) from this
@@ -145,7 +154,7 @@ tree and from a browser rendering of it. None was taken from the tool that wrote
 - **Hardening**: 159/159 pages carry exactly one robots meta reading `noindex, nofollow, noarchive, nosnippet`. On every page:
   - the referrer is set;
   - there is no JSON-LD;
-  - there is exactly one banner, directly after the skip link, with its stylesheet linked;
+  - there is no disclosure banner (its element and its wording are both absent), and the preview stylesheet is linked;
   - the canonical is still the practice's own;
   - `og:url` is this preview and `og:description` is the disclosure;
   - there is no image-bearing meta (`og:image`, `twitter:image`, `og:featured_image`, `image_src`);
@@ -157,21 +166,21 @@ tree and from a browser rendering of it. None was taken from the tool that wrote
   - 318/318 forms are inert.
   - Both patient forms have `action=""`, `onsubmit="return false"`, an empty `data-endpoint` and **no submit control** (2/2), each with its notice.
   - No title carries a prefix.
-- **Byte identity**: 511 non-HTML files are byte-identical to the handoff build. The only others are the named preview additions: `.gitattributes`, `.gitignore`, `.nojekyll`, `PROVENANCE.json`, `PROVENANCE.md`, `README.md`, `robots.txt`, `styles/preview-banner.css`.
+- **Byte identity**: 511 non-HTML files are byte-identical to the handoff build. The only others are the named preview additions: `.gitattributes`, `.gitignore`, `.nojekyll`, `PROVENANCE.json`, `PROVENANCE.md`, `README.md`, `robots.txt`, `styles/preview.css`.
 - **Secrets**: 173 text files, this one included, were scanned for credential-shaped strings (Google API keys, the fal.ai key format, GitHub, OpenAI, Slack and AWS tokens, private keys) and for build-machine paths. There were 0 hits.
 - **Reference audit**: 24,016 local references (18,666 href, 1,737 src, 316 action, 3,292 srcset, 1 poster, 4 css url()) were resolved against the file that carries each one.
   - 0 escape the site root, 0 point at a missing file, and 0 are root-relative.
   - The exception is `404.html`, whose references are all absolute under `/visionproeyecare/` by design.
 - **Rendering at the preview's subpath** (`served exactly as GitHub Pages serves a project site: only under /visionproeyecare/, a missing path answered by 404.html`):
   - Every page was loaded in headless Chrome at 1440 and 390 px (316 loads), with lazy images forced to load.
-  - The result was 0 responses ≥ 400, 0 broken images, 0 console errors, 0 requests outside the prefix, 0 horizontal overflow at 390, and the banner visible on every load.
-  - Chrome cancelled 1 request itself (`website-accessibility-policy/@390 Image assets/img/vision-pro-logo-480.webp`), and no image was left broken.
-- **404 at depth**: `no-such-page/`, `a/b/c/d/no-such-page`, `eye-care-services/nope/` each returned 404 and rendered the styled page with its banner, 0 failed subresources and 0 broken images.
+  - The result was 0 responses ≥ 400, 0 broken images, 0 console errors, 0 requests outside the prefix, 0 horizontal overflow at 390, and no banner on any load (each page rendered at least 200 characters of text for that absence to be read from).
+  - Chrome cancelled 1 request itself (`the-staff/@390 Image assets/img/vision-pro-logo-480.webp`), and no image was left broken.
+- **404 at depth**: `no-such-page/`, `a/b/c/d/no-such-page`, `eye-care-services/nope/` each returned 404 and rendered the styled page with no banner, 0 failed subresources and 0 broken images.
 - **Search**: `/search/?q=dry eye` returned 18 results at the subpath, all inside `/visionproeyecare/`. The first one opens (HTTP 200).
 - **Patient forms, JavaScript on**: a submit on each was cancelled, the page did not navigate, 0 requests were sent, and the notice was present.
 - **Patient forms, JavaScript off**: on both forms, Enter in a text field and a click that landed on the button (hit-tested) produced 0 and 0 non-GET requests, and the page stayed put.
   - Positive control: the same button was re-armed through the DevTools protocol, with no page script, and clicked again. Each form's click was **caught** submitting (POST /visionproeyecare/contact-us/appointment-request-form/; POST /visionproeyecare/contact-us/patient-registration-form/), which proves the test can see a submission.
   - Every non-GET request was failed locally, so none left the machine.
-- **The banner covers no control**: hit-tested at each control's centre, the focused skip link is topmost at 390 px and 1440 px, and the open mobile drawer's close button is topmost at 390 px.
+- **Nothing covers a control**: hit-tested at each control's centre, the focused skip link is topmost at 390 px and 1440 px, and the open mobile drawer's close button is topmost at 390 px.
 - **Tree**: `sitemap.xml`, `llms.txt`, `_headers`, `_redirects`, `audit/` and `src/` are absent. `.nojekyll` is present. `robots.txt` reads `Disallow: /`, which has no effect at this subpath (deviation #9).
 - **After this file was written**, `preview-docs.mjs` re-ran the static checks (tree, byte identity, secrets, hardening, references) over the finished tree, including README.md, PROVENANCE.md and PROVENANCE.json. It would have refused to finish unless they passed.
