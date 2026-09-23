@@ -1,0 +1,169 @@
+/* tokens.css — the Vision Pro design system ("Clear Focus").
+   ONE source for every colour, type size, space, radius and shadow in the build.
+   Change a value HERE, never at a call site.
+
+   BRAND (measured): the five values marked [m] are the live site's computed colours,
+   read from audit/design-baseline.json (browser capture at 390/768/1024/1440px) and
+   preserved so the redesign is still unmistakably Vision Pro:
+     #0e6ba4 nav/button blue · #f9d446 heading-rule gold · #263e4a slate ·
+     #eff7fc pale sky panel · #464451 body text.
+   Everything else is designed around them. The measured source token layer is kept for
+   reference at audit/source-design/source-tokens.css. */
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/plus-jakarta-sans.woff2") format("woff2");
+  font-weight: 400 800; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/plus-jakarta-sans-italic.woff2") format("woff2");
+  font-weight: 400 800; font-style: italic; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+:root {
+  /* --- brand ------------------------------------------------------- */
+  --vp-blue: #0e6ba4;          /* [m] */
+  --vp-blue-600: #0b5b8d;
+  --vp-blue-700: #094a74;
+  --vp-blue-300: #6fb0d9;
+  --vp-blue-100: #d7e9f5;
+  --vp-sky: #eff7fc;           /* [m] */
+  --vp-gold: #f9d446;          /* [m] */
+  --vp-gold-600: #e0b722;
+  --vp-gold-100: #fdf4cf;
+  --vp-slate: #263e4a;         /* [m] */
+  --vp-graphite: #464451;      /* [m] */
+  --vp-navy: #0a1f30;
+  --vp-navy-800: #0e2a40;
+  --vp-navy-700: #143753;
+
+  /* --- neutrals ---------------------------------------------------- */
+  --n-0: #ffffff;
+  --n-25: #fafcfd;
+  --n-50: #f4f8fb;
+  --n-100: #e8eff4;
+  --n-200: #d6e1e8;
+  --n-400: #8a9aa5;
+  --n-600: #4d5c66;
+  --n-800: #1f2d36;
+  --n-900: #12202a;
+
+  /* --- semantic ---------------------------------------------------- */
+  --c-bg: var(--n-0);
+  --c-surface: var(--n-0);
+  --c-surface-2: var(--n-50);
+  --c-sky: var(--vp-sky);
+  --c-text: var(--n-900);
+  --c-text-2: var(--n-600);
+  --c-heading: var(--vp-navy);
+  --c-line: var(--n-200);
+  --c-line-soft: var(--n-100);
+  --c-link: var(--vp-blue-600);
+  --c-link-hover: var(--vp-blue-700);
+  --c-accent: var(--vp-blue);
+  --c-accent-ink: var(--n-0);
+  --c-highlight: var(--vp-gold);
+  --c-highlight-ink: var(--vp-navy);
+  --c-dark: var(--vp-navy);
+  --c-dark-2: var(--vp-navy-800);
+  --c-dark-3: var(--vp-navy-700);
+  --c-on-dark: #eaf2f8;
+  --c-on-dark-2: #a8bdcc;
+  --c-on-dark-line: #24445d;
+  --c-focus: var(--vp-gold);
+  --c-danger: #a3261b;
+  --c-success: #17684a;
+
+  /* alpha layers — kept here so no stylesheet writes a raw colour */
+  --a-navy-04: rgb(10 31 48 / .04);
+  --a-navy-08: rgb(10 31 48 / .08);
+  --a-navy-14: rgb(10 31 48 / .14);
+  --a-navy-40: rgb(10 31 48 / .40);
+  --a-navy-72: rgb(10 31 48 / .72);
+  --a-blue-10: rgb(14 107 164 / .10);
+  --a-blue-18: rgb(14 107 164 / .18);
+  --a-blue-35: rgb(14 107 164 / .35);
+  --a-gold-25: rgb(249 212 70 / .25);
+  --a-gold-50: rgb(249 212 70 / .5);
+  --a-white-06: rgb(255 255 255 / .06);
+  --a-white-10: rgb(255 255 255 / .10);
+  --a-white-16: rgb(255 255 255 / .16);
+  --a-white-70: rgb(255 255 255 / .70);
+  --a-white-88: rgb(255 255 255 / .88);
+
+  /* --- type -------------------------------------------------------- */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+  --fs-2xs: .75rem;
+  --fs-xs: .8125rem;
+  --fs-sm: .9375rem;
+  --fs-base: 1.0625rem;
+  --fs-md: 1.1875rem;
+  --fs-lg: clamp(1.25rem, 1.15rem + .45vw, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+  --fs-2xl: clamp(1.875rem, 1.4rem + 2vw, 2.875rem);
+  --fs-3xl: clamp(2.25rem, 1.45rem + 3.4vw, 4rem);
+  --lh-tight: 1.08;
+  --lh-snug: 1.25;
+  --lh-body: 1.68;
+  --tracking-tight: -.022em;
+  --tracking-wide: .14em;
+
+  /* --- space ------------------------------------------------------- */
+  --sp-1: .25rem;
+  --sp-2: .5rem;
+  --sp-3: .75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+  --section-y: clamp(3.5rem, 2.2rem + 5.5vw, 7.5rem);
+  --gutter: clamp(1rem, .6rem + 2.4vw, 2.25rem);
+  --container: 76rem;
+  --container-narrow: 46rem;
+
+  /* --- shape ------------------------------------------------------- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 36px;
+  --r-pill: 999px;
+  --r-lens: 50% / 42%;
+  --border: 1px solid var(--c-line);
+
+  /* --- depth ------------------------------------------------------- */
+  --shadow-xs: 0 1px 2px var(--a-navy-08);
+  --shadow-sm: 0 1px 2px var(--a-navy-04), 0 6px 18px var(--a-navy-08);
+  --shadow-md: 0 2px 4px var(--a-navy-04), 0 14px 36px var(--a-navy-14);
+  --shadow-lg: 0 30px 70px -20px var(--a-navy-40);
+  --ring: 0 0 0 3px var(--c-focus);
+
+  /* --- motion ------------------------------------------------------ */
+  --ease-out: cubic-bezier(.22, .61, .36, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-1: 160ms;
+  --dur-2: 280ms;
+  --dur-3: 600ms;
+
+  /* --- layers ------------------------------------------------------ */
+  --z-header: 50;
+  --z-menu: 60;
+  --z-drawer: 80;
+}
