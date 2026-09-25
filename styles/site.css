@@ -609,6 +609,152 @@ input, select, textarea { font-size: max(1rem, 16px) !important; }
   .faq summary { min-height: 44px; }
 }
 
+/* ===== phone layout (≤ 719px) ========================================= */
+/* "Read more" is the disclosure src/build/mobile.mjs writes. Copy waits behind it only on a phone and
+   only where the head script has run (.js); everywhere else the button is not rendered and every word
+   is in place. Nothing is removed from the page — a phone is shown the opening, and asks for the rest. */
+.mfold__btn { display: none; }
+.post-card__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r-md); }
+@media (max-width: 719px) {
+  .js .mfold__more:not([data-open]) { display: none; }
+  .js .mfold__btn {
+    display: flex; width: fit-content; align-items: center; gap: .35rem; min-height: 44px; margin: calc(-1 * var(--sp-2)) 0 var(--sp-3); padding: 0 .1rem;
+    border: 0; background: none; cursor: pointer; font: 700 var(--fs-sm)/1.2 var(--font-sans); color: var(--c-link); text-align: left;
+  }
+  .mfold__btn .icon { transition: transform var(--dur-2) var(--ease-out); }
+  .mfold__btn[aria-expanded="true"] .icon { transform: rotate(180deg); }
+  .on-dark .mfold__btn { color: var(--c-highlight); }
+  .mfold__more[data-open] { animation: fadeIn var(--dur-2) both; }
+  .js .list--fold:not([data-open]) > li:nth-child(n+10) { display: none; }
+  .js [data-fold="3"]:not([data-open]) > li:nth-child(n+4) { display: none; }
+  .list--fold + .mfold__btn { margin-top: var(--sp-2); }
+  .logos--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* heroes: the promise, one paragraph and the two ways to act, on the first screen */
+  .hero { padding-block: var(--sp-5) var(--sp-7); }
+  .hero__grid, .page-hero__grid { gap: var(--sp-6); }
+  .hero h1 { margin-bottom: var(--sp-4); }
+  .hero .btn-row, .page-hero .btn-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-2); margin-top: var(--sp-4); }
+  .hero .btn-row .btn, .page-hero .btn-row .btn { width: 100%; }
+  .facts { margin-top: var(--sp-5); padding-top: var(--sp-4); }
+  .lens-frame { aspect-ratio: 5 / 4; }
+  .page-hero { padding-block: var(--sp-5) var(--sp-6); }
+  .page-hero h1 { margin-bottom: var(--sp-3); }
+  .page-hero__media .frame { aspect-ratio: 16 / 9; }
+  .crumbs { margin-bottom: var(--sp-3); }
+
+  /* sections: less air, shorter pictures (a 4:5 portrait was a whole screen on its own) */
+  .section-head { margin-bottom: var(--sp-5); }
+  .section-head p { font-size: var(--fs-base); }
+  .grid { gap: var(--sp-3); }
+  .split, .doctor, .review, .visit { gap: var(--sp-5); }
+  .split__media .frame img, .split__media--tall .frame img { aspect-ratio: 16 / 10; }
+  .doctor__photo .frame { aspect-ratio: 4 / 3; }
+  .doctor__photo .frame img { object-position: 62% 18%; }
+  .callout { gap: var(--sp-4); padding: var(--sp-5) var(--sp-4); }
+  .callout img { aspect-ratio: 16 / 9; }
+  .mosaic > :first-child { aspect-ratio: 16 / 10; }
+  .mosaic > :not(:first-child) { aspect-ratio: 4 / 3; }
+  .mosaic img { min-height: 0; }
+  .tile { aspect-ratio: 4 / 5; }
+  .review__card { padding: var(--sp-5); }
+  .review__text { font-size: var(--fs-lg); }
+  .nap { padding: var(--sp-5); }
+  .logos li { min-height: 4rem; }
+
+  /* a short set of link cards (services, news, related care) is a row to swipe: one card and the edge of
+     the next on screen, instead of a stack four screens tall. Every card is still in the page, in order. */
+  .grid--rail {
+    display: grid; grid-auto-flow: column; grid-auto-columns: min(82%, 20rem); grid-template-columns: none; gap: var(--sp-3);
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+    margin-inline: calc(-1 * var(--gutter)); padding: var(--sp-1) var(--gutter) var(--sp-4); scrollbar-width: thin;
+  }
+  .grid--rail > * { scroll-snap-align: start; }
+  .grid--rail .card:hover, .grid--rail .post-card:hover { transform: none; }
+  /* a longer set of link cards becomes compact rows: a thumbnail beside the title, the summary under both
+     at full width; the whole card is still the link */
+  .grid:not(.grid--rail) > .card--media:has(> .card__img) { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: var(--sp-2) var(--sp-4); align-items: center; padding: var(--sp-4); }
+  .grid:not(.grid--rail) > .card--media:has(> .card__img) > .card__body { display: contents; }
+  .grid:not(.grid--rail) > .card--media > .card__img { grid-row: 1; width: 4.5rem; aspect-ratio: 1; border-radius: var(--r-sm); }
+  .grid:not(.grid--rail) > .card--media > .card__img--contain { padding: var(--sp-2); }
+  .grid:not(.grid--rail) > .card--media:has(> .card__img) :is(.card__kicker, p, .link-arrow) { grid-column: 1 / -1; }
+  .card--media .card__body { padding: var(--sp-4); gap: var(--sp-2); }
+  .card--text .card__icon { display: none; }
+  .card h3 { font-size: var(--fs-base); }
+  .card .link-arrow { font-size: var(--fs-xs); }
+  .post-list { gap: var(--sp-3); }
+  .post-card { padding: var(--sp-4); }
+  /* a link card's summary is a teaser for the page it opens: three lines on a phone, the whole
+     summary still in the page (search engines, screen readers) and one tap from its full story */
+  .grid:not(.grid--rail) > .card p, .post-list:not(.grid--rail) .post-card p {
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden;
+  }
+  .grid:not(.grid--rail) > .card--media > .card__img img[src*="thumbnail-eyeglass-guide"] { object-position: 0 40%; transform: scale(1.4); transform-origin: 0 40%; }
+
+  /* product catalogues (contact-lens brands): one column, the picture beside the name; the teaser is a
+     cut-off copy of the text in the product's own "Read More", so it shows three lines */
+  .catalog { grid-template-columns: minmax(0, 1fr); gap: var(--sp-3); }
+  .product { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: var(--sp-2) var(--sp-3); align-items: center; padding: var(--sp-3); }
+  .product > img { grid-row: 1; }
+  .product > :not(img, h3, h4) { grid-column: 1 / -1; }
+  .product:has(> details.more) > p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+
+  /* page tools: the patient links stay; search and the address are in the footer, except on Contact Us,
+     where the address card is the page's answer and leads the tools */
+  .page-body { gap: var(--sp-6); }
+  .page-body :is(.aside-card--search, .aside-card--dark) { display: none; }
+  .page-body--contact .aside-card--dark { display: block; order: -1; }
+  .prose h2 { margin: var(--sp-6) 0 var(--sp-3); padding-top: var(--sp-4); }
+  .prose h3 { margin: var(--sp-5) 0 var(--sp-2); }
+  .prose .img-wide--dup { display: none; }
+  .prose .img-float--tall { max-width: 15rem; }
+
+  /* galleries: three to a row, square; a landscape group photo or a banner takes a whole row */
+  .prose .gallery img { margin: 0; }
+  .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-2); }
+  .gallery img { aspect-ratio: 1; }
+  .gallery img.g-land { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
+  .gallery img.g-wide { grid-column: 1 / -1; aspect-ratio: 8 / 3; }
+  /* a gallery that opens with a full-row photo and ends two short of a full row: the first of the last
+     two spans two cells, so the grid ends square (height taken from its neighbour, not its own ratio) */
+  .gallery:has(> img.g-land:first-child) > img:nth-last-child(2):nth-child(3n+2) { grid-column: span 2; aspect-ratio: auto; height: 0; min-height: 100%; }
+  /* a square photo with no square neighbour (between banners) takes the row instead of a third of it */
+  .gallery > img:not(.g-wide, .g-land):is(:first-child, .g-wide + img, .g-land + img):is(:last-child, :has(+ .g-wide), :has(+ .g-land)) { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+
+  /* photo crops and overlays */
+  .split__media--tall .frame img { object-position: 50% 25%; }
+  .callout--alert img { object-position: 85% 50%; }
+  .tile::after { background: linear-gradient(180deg, transparent 15%, var(--a-navy-72) 55%, var(--a-navy-92) 100%); }
+
+  /* the skip link keeps a 44px target now that phone type is 16px */
+  .skip-link { display: inline-flex; align-items: center; min-height: 44px; }
+
+  /* words that must not break: a phone number, a time range, a plan name, an accent phrase */
+  a[href^="tel:"] { white-space: nowrap; }
+  .hours td { white-space: nowrap; }
+  .hours th { padding-right: var(--sp-3); }
+  .section-title .accent { display: inline-block; }
+  .btn { text-wrap: balance; text-align: center; }
+  .logos .logo-word { font-size: var(--fs-xs); letter-spacing: 0; overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
+
+  /* forms: no box inside a box, labels above their inputs, shorter answer boxes, a full-width send */
+  .vf fieldset { border: 0; border-radius: 0; padding: 0; }
+  .vf .field--row { grid-template-columns: minmax(0, 1fr); }
+  .vf legend { padding: 0 0 .35rem; }
+  .vf .sub-label { order: -1; }
+  .vf textarea { height: 8rem; }
+  /* a choice whose whole label is a link (the privacy consent): the link is a flex item beside the box,
+     so it takes its 44px height from min-height, not from padding that would push its text down */
+  .vf .choices label > a:not(.btn) { padding: 0; margin: 0; display: flex; align-items: center; min-height: 44px; }
+  .vf .actions .btn { width: 100%; }
+
+  .cta-band { padding-block: var(--sp-7); }
+  .footer { padding-block: var(--sp-7) var(--sp-5); }
+  .footer__top { gap: var(--sp-5); padding-bottom: var(--sp-6); }
+  /* a footer link that wraps to two lines gets air above and below, so it does not run into the next */
+  .footer li a { padding-block: .4rem; }
+}
+
 /* ===== reveal ========================================================= */
 /* hidden only once site.js has proven it can reveal (class set by the script itself), so a
    failed or blocked script never leaves content invisible */

@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../styles/site.css">
 <link rel="stylesheet" href="../styles/motion.css">
 <link rel="stylesheet" href="../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -136,7 +136,8 @@
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li><a href="../whats-new/">What’s New</a></li><li><span aria-current="page">Beyond Drops: Advanced Dry Eye Treatments with BlephEx &amp; iLux</span></li></ol></nav>
       <h1>Beyond Drops: Advanced Dry Eye Treatments with BlephEx &amp; iLux</h1>
       <p class="page-hero__date"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> <time>Mar 04, 2025</time></p>
-      <div class="page-hero__lead"><p>Many patients rely on artificial tears for dry eye relief, but these drops only provide temporary moisture without addressing the underlying cause—inflammation and meibomian gland dysfunction (MGD).</p><p>Vision Pro in Spring offers advanced in-office treatments like BlephEx and iLux, which restore natural tear production and provide long-lasting comfort.</p></div>
+      <div class="page-hero__lead"><p>Many patients rely on artificial tears for dry eye relief, but these drops only provide temporary moisture without addressing the underlying cause—inflammation and meibomian gland dysfunction (MGD).</p>
+<p>Vision Pro in Spring offers advanced in-office treatments like BlephEx and iLux, which restore natural tear production and provide long-lasting comfort.</p></div>
       <div class="btn-row"><a class="btn" href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book an Appointment</a><a class="btn btn--ghost" href="tel:2817092618"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> Call 281-709-2618</a></div>
     </div>
     <div class="page-hero__media"><div class="frame"><img loading="lazy" src="../assets/img/woman-blond-closeup-1280x480-960.webp" srcset="../assets/img/woman-blond-closeup-1280x480-240.webp 240w, ../assets/img/woman-blond-closeup-1280x480-480.webp 480w, ../assets/img/woman-blond-closeup-1280x480-960.webp 960w, ../assets/img/woman-blond-closeup-1280x480-1280.webp 1280w" sizes="(min-width: 960px) 32rem, 100vw" width="960" height="360" alt="" fetchpriority="high" decoding="async"></div></div>
@@ -168,7 +169,7 @@
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>
@@ -176,7 +177,7 @@
   </div>
 </div></aside></div><section class="section section--mist" aria-labelledby="related-care"><div class="container">
     <div class="section-head"><p class="eyebrow">Related eye care</p><h2 id="related-care" class="section-title">More in <span class="accent">Dry Eye &amp; Eye Conditions</span></h2></div>
-    <div class="grid grid--3"><article class="card card--media" data-reveal>
+    <div class="grid grid--3 grid--rail"><article class="card card--media" data-reveal>
     <div class="card__img card__img--contain"><img src="../assets/img/happy-parents20with-child201280x480-preview1-960.webp" srcset="../assets/img/happy-parents20with-child201280x480-preview1-240.webp 240w, ../assets/img/happy-parents20with-child201280x480-preview1-480.webp 480w, ../assets/img/happy-parents20with-child201280x480-preview1-960.webp 960w" sizes="(min-width: 1100px) 26rem, (min-width: 700px) 50vw, 100vw" width="960" height="360" alt="" loading="lazy" decoding="async"></div>
     <div class="card__body"><span class="card__kicker">Dry Eye &amp; Eye Conditions</span>
       <h3><a href="../eye-care-services/eye-conditions/">Eye Conditions</a></h3>
@@ -203,7 +204,8 @@
     <div data-reveal data-reveal-delay="1">
       <p class="eyebrow">Your Spring Eye Doctor</p>
       <h2 id="doctor-band">Meet Your Eye Doctor, <span class="accent">Paul Proske, O.D.</span></h2>
-      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p><p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
+      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p>
+<p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
       <ul class="chips"><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg> Therapeutic Optometrist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"></use></svg> Glaucoma Specialist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg> Open since 2007</li></ul>
       <a class="link-arrow" href="../our-eye-doctors/">Meet Our Optometrist <svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg></a>
     </div>

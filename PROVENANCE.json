@@ -100,7 +100,7 @@
       "overflow390": 0,
       "bannerShown": 0,
       "browserCancelled": [
-        "the-staff/@390 Image assets/img/vision-pro-logo-480.webp"
+        "website-accessibility-policy/@390 Image assets/img/vision-pro-logo-480.webp"
       ],
       "deep404": [
         {
@@ -109,7 +109,7 @@
           "subresourceFailures": [],
           "broken": [],
           "banner": false,
-          "cssRules": 500
+          "cssRules": 504
         },
         {
           "path": "a/b/c/d/no-such-page",
@@ -117,7 +117,7 @@
           "subresourceFailures": [],
           "broken": [],
           "banner": false,
-          "cssRules": 500
+          "cssRules": 504
         },
         {
           "path": "eye-care-services/nope/",
@@ -125,7 +125,7 @@
           "subresourceFailures": [],
           "broken": [],
           "banner": false,
-          "cssRules": 500
+          "cssRules": 504
         }
       ],
       "search": {

@@ -93,6 +93,7 @@
   --a-navy-14: rgb(10 31 48 / .14);
   --a-navy-40: rgb(10 31 48 / .40);
   --a-navy-72: rgb(10 31 48 / .72);
+  --a-navy-92: rgb(10 31 48 / .92);
   --a-blue-10: rgb(14 107 164 / .10);
   --a-blue-18: rgb(14 107 164 / .18);
   --a-blue-35: rgb(14 107 164 / .35);
@@ -166,4 +167,16 @@
   --z-header: 50;
   --z-menu: 60;
   --z-drawer: 80;
+}
+
+/* --- phones -------------------------------------------------------
+   The same system set for a 390px screen at reading distance: 16px body copy, a tighter
+   measure of leading, and less air between sections so a screen holds a whole idea. */
+@media (max-width: 719px) {
+  :root {
+    --fs-base: 1rem;
+    --fs-md: 1.0625rem;
+    --lh-body: 1.6;
+    --section-y: 2.75rem;
+  }
 }

@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../styles/site.css">
 <link rel="stylesheet" href="../styles/motion.css">
 <link rel="stylesheet" href="../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -136,7 +136,8 @@
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li><a href="../whats-new/">What’s New</a></li><li><span aria-current="page">How Long is an Eye Exam? What to Expect at Vision Pro Optometry</span></li></ol></nav>
       <h1>How Long is an Eye Exam? What to Expect at Vision Pro Optometry</h1>
       <p class="page-hero__date"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> <time>Jun 16, 2025</time></p>
-      <div class="page-hero__lead"><p>At <a href="../"><strong>Vision Pro Optometry</strong></a> in Spring, TX, one of the most frequent questions we hear is: “How long does an eye exam take?” The answer? It depends on the type of visit — whether it’s a routine vision check, a contact lens fitting, or a medical eye issue.</p><p>Let’s walk you through what to expect and how to make the most of your appointment.</p></div>
+      <div class="page-hero__lead"><p>At <a href="../"><strong>Vision Pro Optometry</strong></a> in Spring, TX, one of the most frequent questions we hear is: “How long does an eye exam take?” The answer? It depends on the type of visit — whether it’s a routine vision check, a contact lens fitting, or a medical eye issue.</p>
+<p>Let’s walk you through what to expect and how to make the most of your appointment.</p></div>
       <div class="btn-row"><a class="btn" href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book an Appointment</a><a class="btn btn--ghost" href="tel:2817092618"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> Call 281-709-2618</a></div>
     </div>
     <div class="page-hero__media"><div class="frame"><img loading="lazy" src="../assets/img/man-undergoing-an-eye-exam-960.webp" srcset="../assets/img/man-undergoing-an-eye-exam-240.webp 240w, ../assets/img/man-undergoing-an-eye-exam-480.webp 480w, ../assets/img/man-undergoing-an-eye-exam-960.webp 960w, ../assets/img/man-undergoing-an-eye-exam-1600.webp 1600w, ../assets/img/man-undergoing-an-eye-exam-1766.webp 1766w" sizes="(min-width: 960px) 32rem, 100vw" width="960" height="641" alt="" fetchpriority="high" decoding="async"></div></div>
@@ -146,7 +147,8 @@
 <ul><li><strong>Routine Eye Exams:</strong> ~30 minutes</li><li><strong>Contact Lens Fittings:</strong> ~40 minutes</li><li><strong>Medical Eye Exams:</strong> Varies based on condition</li></ul>
 <h2 id="eye-exam-step-by-step-at-vision-pro"><a href="../eye-care-services/eye-exams/">Eye Exam</a>: Step-by-Step at Vision Pro</h2>
 <p>And because we advise most patients to choose the implant for strictly distance vision, we also put your near vision correction in the bottom of your glasses so that one pair of progressive lenses will provide sharp distance vision and excellent near vision too!</p>
-<ol><li><strong> Paperwork</strong></li></ol>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1" aria-describedby="eye-exam-step-by-step-at-vision-pro" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-1"><ol><li><strong> Paperwork</strong></li></ol>
 <p>Complete your forms online at <a href="../"><strong>www.VisionProEyecare.com</strong></a> or at our office before your appointment.</p>
 <ol><li><strong> Extensive Pre-Testing</strong></li></ol>
 <ul><li>Auto-refraction &amp; corneal curvature</li><li>Axial eye lengths &amp; alignment</li><li>Intraocular pressure</li><li>Colour vision &amp; visual field testing</li><li>Uncorrected visual acuity checks</li></ul>
@@ -156,7 +158,7 @@
 <p>Includes:</p>
 <ul><li>Health &amp; vision history review</li><li>Pupillary &amp; eye movement tests</li><li>Hands-on refraction</li><li>Full ocular health evaluation</li></ul>
 <ol><li><strong> Contact Lens Fitting (If Applicable)</strong></li></ol>
-<p>Tailored lens selections for comfort and clarity.</p>
+<p>Tailored lens selections for comfort and clarity.</p></div>
 <h2 id="visit-vision-pro-optometry">Visit Vision Pro Optometry</h2>
 <p><strong>Address:</strong> 20290 Kuykendahl Road, Spring, TX</p>
 <p><strong>Landmarks:</strong> Between Schlotzsky's and Alica’s, near Lowe’s</p>
@@ -176,7 +178,7 @@
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>

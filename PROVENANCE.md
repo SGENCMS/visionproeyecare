@@ -174,7 +174,7 @@ tree and from a browser rendering of it. None was taken from the tool that wrote
 - **Rendering at the preview's subpath** (`served exactly as GitHub Pages serves a project site: only under /visionproeyecare/, a missing path answered by 404.html`):
   - Every page was loaded in headless Chrome at 1440 and 390 px (316 loads), with lazy images forced to load.
   - The result was 0 responses ≥ 400, 0 broken images, 0 console errors, 0 requests outside the prefix, 0 horizontal overflow at 390, and no banner on any load (each page rendered at least 200 characters of text for that absence to be read from).
-  - Chrome cancelled 1 request itself (`the-staff/@390 Image assets/img/vision-pro-logo-480.webp`), and no image was left broken.
+  - Chrome cancelled 1 request itself (`website-accessibility-policy/@390 Image assets/img/vision-pro-logo-480.webp`), and no image was left broken.
 - **404 at depth**: `no-such-page/`, `a/b/c/d/no-such-page`, `eye-care-services/nope/` each returned 404 and rendered the styled page with no banner, 0 failed subresources and 0 broken images.
 - **Search**: `/search/?q=dry eye` returned 18 results at the subpath, all inside `/visionproeyecare/`. The first one opens (HTTP 200).
 - **Patient forms, JavaScript on**: a submit on each was cancelled, the page did not navigate, 0 requests were sent, and the notice was present.

@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../styles/site.css">
 <link rel="stylesheet" href="../styles/motion.css">
 <link rel="stylesheet" href="../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -136,7 +136,9 @@
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li><a href="../whats-new/">What’s New</a></li><li><span aria-current="page">Screen Time and Eye Health: What You Should Know</span></li></ol></nav>
       <h1>Screen Time and Eye Health: What You Should Know</h1>
       <p class="page-hero__date"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> <time>Mar 03, 2026</time></p>
-      <div class="page-hero__lead"><p>We live in a screen-heavy world. From morning emails to evening streaming, our eyes are exposed to more artificial light and digital glare than ever before. For many, this constant exposure isn’t just tiring — it’s painful.</p><p>If your vision gets fuzzy after a few hours at the desk, or your eyes sting after a night of scrolling, it’s probably not random. That’s digital eye strain — also known as <strong>computer vision syndrome</strong> — and it’s one of the most common consequences of modern life.</p></div>
+      <div class="page-hero__lead"><p>We live in a screen-heavy world. From morning emails to evening streaming, our eyes are exposed to more artificial light and digital glare than ever before. For many, this constant exposure isn’t just tiring — it’s painful.</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-1"><p>If your vision gets fuzzy after a few hours at the desk, or your eyes sting after a night of scrolling, it’s probably not random. That’s digital eye strain — also known as <strong>computer vision syndrome</strong> — and it’s one of the most common consequences of modern life.</p></div></div>
       <div class="btn-row"><a class="btn" href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book an Appointment</a><a class="btn btn--ghost" href="tel:2817092618"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> Call 281-709-2618</a></div>
     </div>
     <div class="page-hero__media"><div class="frame"><img loading="lazy" src="../assets/img/bruce-mars-559223-unsplash-960.webp" srcset="../assets/img/bruce-mars-559223-unsplash-240.webp 240w, ../assets/img/bruce-mars-559223-unsplash-480.webp 480w, ../assets/img/bruce-mars-559223-unsplash-960.webp 960w, ../assets/img/bruce-mars-559223-unsplash-1600.webp 1600w, ../assets/img/bruce-mars-559223-unsplash-2400.webp 2400w" sizes="(min-width: 960px) 32rem, 100vw" width="960" height="640" alt="" fetchpriority="high" decoding="async"></div></div>
@@ -163,7 +165,7 @@
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>

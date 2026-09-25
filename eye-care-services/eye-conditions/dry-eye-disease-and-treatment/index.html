@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../../../styles/site.css">
 <link rel="stylesheet" href="../../../styles/motion.css">
 <link rel="stylesheet" href="../../../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -136,7 +136,9 @@
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../../">Home</a></li><li><a href="../../../eye-care-services/">Eye Care Services</a></li><li><a href="../../../eye-care-services/eye-conditions/">Eye Condition Treatment</a></li><li><span aria-current="page">Dry Eye Treatment in Spring, TX</span></li></ol></nav>
       <h1>Dry Eye Treatment in Spring, TX</h1>
       
-      <div class="page-hero__lead"><p>If your eyes feel dry, burning, or constantly watery, there is usually a reason and a better way to treat it.</p><p>Many people try eye drops for months without lasting relief. At Vision Pro, our comprehensive <a href="../../../eye-care-services/eye-exams/">eye exams</a> take a closer look. Our goal is to identify what’s causing your symptoms and create a plan that helps your eyes feel more comfortable day to day.</p></div>
+      <div class="page-hero__lead"><p>If your eyes feel dry, burning, or constantly watery, there is usually a reason and a better way to treat it.</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-1"><p>Many people try eye drops for months without lasting relief. At Vision Pro, our comprehensive <a href="../../../eye-care-services/eye-exams/">eye exams</a> take a closer look. Our goal is to identify what’s causing your symptoms and create a plan that helps your eyes feel more comfortable day to day.</p></div></div>
       <div class="btn-row"><a class="btn" href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book an Appointment</a><a class="btn btn--ghost" href="tel:2817092618"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> Call 281-709-2618</a></div>
     </div>
     
@@ -147,14 +149,16 @@
 <p>Your tear film has several layers that keep your eyes smooth and protected. When one of those layers becomes unstable, tears may evaporate too quickly or fail to coat the eye properly.</p>
 <h3 id="common-dry-eye-symptoms">Common Dry Eye Symptoms</h3>
 <p>You might notice:</p>
-<ul><li>Burning or stinging</li><li>A gritty or “sand in your eyes” feeling</li><li>Redness or irritation</li><li>Blurry or fluctuating vision</li><li>Watery eyes that still feel irritated</li></ul>
-<p>When the surface of your eye becomes irritated, your body may produce a rush of reflex tears. These tears do not stay on the eye long enough to provide lasting comfort, which is why your eyes can feel dry and watery at the same time.</p>
+<ul id="more-2a" data-fold="3"><li>Burning or stinging</li><li>A gritty or “sand in your eyes” feeling</li><li>Redness or irritation</li><li>Blurry or fluctuating vision</li><li>Watery eyes that still feel irritated</li></ul>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-2a more-2" aria-describedby="common-dry-eye-symptoms" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-2"><p>When the surface of your eye becomes irritated, your body may produce a rush of reflex tears. These tears do not stay on the eye long enough to provide lasting comfort, which is why your eyes can feel dry and watery at the same time.</p></div>
 <h2 id="our-approach-to-dry-eye-care">Our Approach to Dry Eye Care</h2>
 <p>If you have been relying on artificial tears alone, you may have noticed that relief does not last long.</p>
-<p>At<a href="../../../">Vision Pro</a>, we focus on <a href="../../../eye-care-services/">identifying what’s causing your symptoms</a> instead of treating dry eye as a single problem.</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-3" aria-describedby="our-approach-to-dry-eye-care" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-3"><p>At<a href="../../../">Vision Pro</a>, we focus on <a href="../../../eye-care-services/">identifying what’s causing your symptoms</a> instead of treating dry eye as a single problem.</p>
 <p>During your visit, we evaluate:</p>
 <ul><li>The quality, stability, and breakup of your tear film</li><li>The function of your meibomian glands</li><li>Signs of inflammation on the surface of your eyes</li><li>Lifestyle and environmental factors that may be contributing</li></ul>
-<p>This testing helps us determine whether your symptoms are related to tear evaporation, gland blockage, inflammation, or tear drainage, so your treatment is based on what your eyes actually need.</p>
+<p>This testing helps us determine whether your symptoms are related to tear evaporation, gland blockage, inflammation, or tear drainage, so your treatment is based on what your eyes actually need.</p></div>
 <h2 id="dry-eye-treatments-chosen-for-your-tear-system">Dry Eye Treatments Chosen for Your Tear System</h2>
 <p>Dry eye treatment works best when it’s based on what your eyes are actually missing. At Vision Pro, we use your eye exam findings to recommend options that support tear quality, eyelid health, or tear retention.</p>
 <p>Your plan may include home care, prescription treatment, or an in-office procedure. Some patients benefit from more than one approach.</p>
@@ -166,7 +170,8 @@
 <p>Our eye doctor may also recommend warm compresses, eyelid cleansing, or other home care to help maintain results between visits.</p>
 <h3 id="lacrifill-for-longer-lasting-tear-retention">Lacrifill® for Longer-Lasting Tear Retention</h3>
 <p>Some patients make enough tears, but those tears do not stay on the eye long enough to do their job. Lacrifill is placed in the tear drainage system to help natural tears remain on the eye’s surface longer.</p>
-<p>This may be a good option for patients with dry, irritated, or watery eyes when tears drain too quickly. In many cases, Lacrifill may be covered by medical insurance when it is considered medically necessary. Our team can help you review your benefits before moving forward. Coverage cannot be guaranteed.</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-4" aria-describedby="lacrifill-for-longer-lasting-tear-retention" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-4"><p>This may be a good option for patients with dry, irritated, or watery eyes when tears drain too quickly. In many cases, Lacrifill may be covered by medical insurance when it is considered medically necessary. Our team can help you review your benefits before moving forward. Coverage cannot be guaranteed.</p></div>
 <h3 id="prescription-eye-drops-and-at-home-care">Prescription Eye Drops and At-Home Care</h3>
 <p>Depending on your needs, your plan may also include:</p>
 <ul><li>Lubricating eye drops</li><li>Prescription dry eye medication</li><li>Warm compresses</li><li>Eyelid hygiene</li><li>Screen and blinking adjustments</li><li>Changes to contact lens wear</li><li>Follow-up visits to monitor your response</li></ul>
@@ -184,7 +189,7 @@
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>
@@ -192,7 +197,7 @@
   </div>
 </div></aside></div><section class="section section--mist" aria-labelledby="related-care"><div class="container">
     <div class="section-head"><p class="eyebrow">Related eye care</p><h2 id="related-care" class="section-title">More in <span class="accent">Dry Eye &amp; Eye Conditions</span></h2></div>
-    <div class="grid grid--3"><article class="card card--media" data-reveal>
+    <div class="grid grid--3 grid--rail"><article class="card card--media" data-reveal>
     <div class="card__img card__img--contain"><img src="../../../assets/img/happy-parents20with-child201280x480-preview1-960.webp" srcset="../../../assets/img/happy-parents20with-child201280x480-preview1-240.webp 240w, ../../../assets/img/happy-parents20with-child201280x480-preview1-480.webp 480w, ../../../assets/img/happy-parents20with-child201280x480-preview1-960.webp 960w" sizes="(min-width: 1100px) 26rem, (min-width: 700px) 50vw, 100vw" width="960" height="360" alt="" loading="lazy" decoding="async"></div>
     <div class="card__body"><span class="card__kicker">Dry Eye &amp; Eye Conditions</span>
       <h3><a href="../../../eye-care-services/eye-conditions/">Eye Conditions</a></h3>
@@ -219,7 +224,8 @@
     <div data-reveal data-reveal-delay="1">
       <p class="eyebrow">Your Spring Eye Doctor</p>
       <h2 id="doctor-band">Meet Your Eye Doctor, <span class="accent">Paul Proske, O.D.</span></h2>
-      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p><p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
+      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p>
+<p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
       <ul class="chips"><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg> Therapeutic Optometrist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"></use></svg> Glaucoma Specialist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg> Open since 2007</li></ul>
       <a class="link-arrow" href="../../../our-eye-doctors/">Meet Our Optometrist <svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg></a>
     </div>

@@ -38,7 +38,7 @@ re-read from this tree as published.
 | Pages mapped | **157 / 157** at their original URLs, 0 missing |
 | Claims traced to the live site (`sr-fabrication`) | **SOURCED: 491 claims across 159 files, 0 untraced** |
 | Platform decontamination | **CLEAN: 0 findings across 168 files** |
-| Responsive + a11y sweep, 390 / 768 / 1024 / 1440 px | **0 blocker · 0 major** across 636 page × width sweeps. Also 12 minor, all “Text clipped by overflow:hidden” on screen-reader-only text, which is clipped by design; and 4 nit, all “Heading level skipped”. |
+| Responsive + a11y sweep, 390 / 768 / 1024 / 1440 px | **0 blocker · 0 major** across 636 page × width sweeps. Also 128 minor, all “Text clipped by overflow:hidden”: 115 are the phone layout's three-line link-card and catalogue teasers (the full text stays in the page); 12 are screen-reader-only text, clipped by design; 1 is a page-level note of further clipped items the sweep did not list one by one (5 more not listed); and 4 nit, all “Heading level skipped”. |
 | Gate (`sr-gate.mjs`) | 26 PASS · 3 FAIL · 0 UNPROVEN. The verdict is NOT-READY, and the handoff zip was packaged with a recorded override. Each red is explained below |
 | Preview hardening, re-read from the shipped bytes | **159 / 159 pages** |
 | Reference audit: every local `href` / `src` / `srcset` / `url()` resolved against its own page | **24,016 checked; 0 escape the site root, 0 missing, 0 root-relative** |

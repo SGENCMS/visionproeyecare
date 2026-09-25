@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../styles/site.css">
 <link rel="stylesheet" href="../styles/motion.css">
 <link rel="stylesheet" href="../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -149,7 +149,7 @@
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>

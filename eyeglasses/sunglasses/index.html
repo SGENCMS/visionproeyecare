@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../../styles/site.css">
 <link rel="stylesheet" href="../../styles/motion.css">
 <link rel="stylesheet" href="../../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -143,16 +143,17 @@
   </div>
 </section><div class="container page-body has-aside"><div class="prose-col"><article class="prose"><img src="../../assets/img/thumbnail-designer-300x200-300.webp" srcset="../../assets/img/thumbnail-designer-300x200-240.webp 240w, ../../assets/img/thumbnail-designer-300x200-300.webp 300w" sizes="(min-width: 600px) 16rem, 100vw" width="300" height="200" alt="designer sunglasses" class="img-float" loading="lazy" decoding="async">
 <h2 id="protect-your-eyes-with-a-sun-sational-look"><strong>Protect your eyes with a sun-sational look!</strong></h2>
-<p>All sunglasses lenses are not created equal. Our designer collection of sunwear features lenses with 100% UV protection from UVA and UVB rays. We also offer a variety of types of lenses, including polarized and different tints to match your activities and lifestyle needs. If you need vision correction to see clearly, our Spring practice will craft sunglasses lenses to match your precise prescription.</p>
-<p>Our optical store keeps you in style with trending sunglasses frames from leading designer brands. All of our frames are made-to-last, with premium materials and quality construction. We also offer sunglasses especially for kids – in the right sizes, shapes, and looks that children want to wear. Stop in anytime to see our collection, and our Spring optical staff will be happy to direct you towards the perfect sunglasses for your needs.</p>
-<p><a href="../../eyeglasses/designer-frames/">Browse some of the designer eyewear brands we carry!</a></p></article></div><aside class="aside" aria-label="Page tools"><div class="aside__sticky">
+<p>All sunglasses lenses are not created equal. Our designer collection of sunwear features lenses with 100% UV protection from UVA and UVB rays. We also offer a variety of types of lenses, including polarized and different tints to match your activities and lifestyle needs.<span class="mfold__more" id="more-1a"> If you need vision correction to see clearly, our Spring practice will craft sunglasses lenses to match your precise prescription.</span></p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1a more-1" aria-describedby="protect-your-eyes-with-a-sun-sational-look" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-1"><p>Our optical store keeps you in style with trending sunglasses frames from leading designer brands. All of our frames are made-to-last, with premium materials and quality construction. We also offer sunglasses especially for kids – in the right sizes, shapes, and looks that children want to wear. Stop in anytime to see our collection, and our Spring optical staff will be happy to direct you towards the perfect sunglasses for your needs.</p>
+<p><a href="../../eyeglasses/designer-frames/">Browse some of the designer eyewear brands we carry!</a></p></div></article></div><aside class="aside" aria-label="Page tools"><div class="aside__sticky">
   
   <div class="aside-card"><h2>Patients</h2><div class="quick">
     <a href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book An Appointment</a>
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>
@@ -199,7 +200,8 @@
     <div data-reveal data-reveal-delay="1">
       <p class="eyebrow">Your Spring Eye Doctor</p>
       <h2 id="doctor-band">Meet Your Eye Doctor, <span class="accent">Paul Proske, O.D.</span></h2>
-      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p><p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
+      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p>
+<p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
       <ul class="chips"><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg> Therapeutic Optometrist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"></use></svg> Glaucoma Specialist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg> Open since 2007</li></ul>
       <a class="link-arrow" href="../../our-eye-doctors/">Meet Our Optometrist <svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg></a>
     </div>

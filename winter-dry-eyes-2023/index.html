@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../styles/site.css">
 <link rel="stylesheet" href="../styles/motion.css">
 <link rel="stylesheet" href="../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -136,7 +136,9 @@
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li><a href="../whats-new/">What’s New</a></li><li><span aria-current="page">This Winter, Don’t Let Dry Eyes Get the Best of You</span></li></ol></nav>
       <h1>This Winter, Don’t Let Dry Eyes Get the Best of You</h1>
       <p class="page-hero__date"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> <time>Feb 28, 2023</time></p>
-      <div class="page-hero__lead"><p>The sharp, dry winds and cold air of winter can cause or worsen dry eye symptoms. So can indoor heating, which sucks out moisture.</p><p>While many of us can't completely avoid wintry weather, there are things we can do to minimize dry eyes, as well as a variety of ways to treat it.</p></div>
+      <div class="page-hero__lead"><p>The sharp, dry winds and cold air of winter can cause or worsen dry eye symptoms. So can indoor heating, which sucks out moisture.</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-1"><p>While many of us can't completely avoid wintry weather, there are things we can do to minimize dry eyes, as well as a variety of ways to treat it.</p></div></div>
       <div class="btn-row"><a class="btn" href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book an Appointment</a><a class="btn btn--ghost" href="tel:2817092618"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> Call 281-709-2618</a></div>
     </div>
     <div class="page-hero__media"><div class="frame"><img loading="lazy" src="../assets/img/woman-dabbing-eyes-in-winter-coat-640.webp" srcset="../assets/img/woman-dabbing-eyes-in-winter-coat-240.webp 240w, ../assets/img/woman-dabbing-eyes-in-winter-coat-480.webp 480w, ../assets/img/woman-dabbing-eyes-in-winter-coat-640.webp 640w" sizes="(min-width: 960px) 32rem, 100vw" width="640" height="351" alt="woman dabbing eyes in winter coat.jpg" fetchpriority="high" decoding="async"></div></div>
@@ -145,8 +147,9 @@
 <p>Dry eye syndrome (DES) is caused by a lack of tears or poor quality tears, leading to irritation and discomfort in the eyes. Dry eye syndrome can be annoying and, left untreated, severe cases can damage the surface of the eye and even lead to vision loss. That's why it's so important to understand what causes DES and to treat it.</p>
 <h3 id="what-causes-dry-eye-syndrome">What Causes Dry Eye Syndrome?</h3>
 <p>Dry eye syndrome can be caused by aging, certain medications and medical conditions, and excessive screen time (we blink less when staring at a digital screen). Other causes include vision correction surgery, and smoking.</p>
-<p>Your environment can also be the culprit. Indoor heating dries out the eyes, and the same is true of cold air and dry winds. Is it any wonder that dry eye symptoms peak during the winter and any time it's cold?</p>
-<p>Fortunately, there are ways to reduce dry eye symptoms.</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-2" aria-describedby="what-causes-dry-eye-syndrome" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-2"><p>Your environment can also be the culprit. Indoor heating dries out the eyes, and the same is true of cold air and dry winds. Is it any wonder that dry eye symptoms peak during the winter and any time it's cold?</p>
+<p>Fortunately, there are ways to reduce dry eye symptoms.</p></div>
 <h3 id="dry-eye-prevention-and-treatment">Dry Eye Prevention and Treatment</h3>
 <p>Following a dry eye consult, your eye doctor will recommend ways to treat the condition. Usually, artificial tears, over-the-counter eye drops or prescription drops are the first line of defense. They may be combined with in-office dry eye treatments.</p>
 <p>In addition, eating foods rich in omega-3 fatty acids, using a humidifier, maintaining eyelid hygiene and applying warm compresses to your eyes as directed by your eye doctor can help alleviate symptoms.</p>
@@ -158,7 +161,7 @@
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>

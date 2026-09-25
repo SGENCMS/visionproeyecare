@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../../styles/site.css">
 <link rel="stylesheet" href="../../styles/motion.css">
 <link rel="stylesheet" href="../../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -147,34 +147,39 @@
 <p>Whether it’s time for a routine exam or something about your vision has changed, we’ll take the time to understand what you’re experiencing and explain what we find.</p>
 <h2 id="what-is-a-comprehensive-eye-exam">What Is a Comprehensive Eye Exam?</h2>
 <p>A comprehensive eye exam looks at both how clearly you see and the health of your eyes. Dr. Proske, O.D. will check your vision, determine whether your prescription needs to be updated, and examine your eyes for changes that may need monitoring or further care.</p>
-<p>Eye exams can also reveal signs associated with conditions such as diabetes and high blood pressure, sometimes before they cause noticeable changes in your vision.</p>
-<p>Even if you feel like you’re seeing well, regular exams give us an opportunity to compare your eye health over time and catch changes earlier.</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1" aria-describedby="what-is-a-comprehensive-eye-exam" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-1"><p>Eye exams can also reveal signs associated with conditions such as diabetes and high blood pressure, sometimes before they cause noticeable changes in your vision.</p>
+<p>Even if you feel like you’re seeing well, regular exams give us an opportunity to compare your eye health over time and catch changes earlier.</p></div>
 <h2 id="why-are-regular-eye-exams-so-important">Why Are Regular Eye Exams So Important?</h2>
 <p>Your vision can feel perfectly normal even when something in your eye health is beginning to change. Regular comprehensive eye exams give Dr. Proske, O.D. the opportunity to monitor those changes over time and determine when additional testing, treatment, or follow-up may be appropriate.</p>
-<p>Routine exams can help us:</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-2" aria-describedby="why-are-regular-eye-exams-so-important" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-2"><p>Routine exams can help us:</p>
 <ul><li>Keep your glasses or contact lens prescription current</li><li>Check for changes in your overall eye health</li><li>Look for early signs of conditions such as glaucoma, cataracts, and macular degeneration</li><li>Monitor eye health when conditions such as diabetes or high blood pressure may increase your risk of eye problems</li><li>Compare findings from one visit to the next</li></ul>
-<p>How often you should have an eye exam depends on factors such as your age, prescription, eye health, medical history, and individual risk factors. Dr. Proske can recommend a schedule based on your needs.</p>
+<p>How often you should have an eye exam depends on factors such as your age, prescription, eye health, medical history, and individual risk factors. Dr. Proske can recommend a schedule based on your needs.</p></div>
 <h2 id="what-to-expect-during-a-comprehensive-eye-exam">What to Expect During a Comprehensive Eye Exam?</h2>
 <p>Your comprehensive eye exam is tailored to your vision, eye health, and any concerns you bring to the visit. Dr. Proske, O.D. will determine which tests are appropriate based on factors such as your age, prescription, health history, and exam findings.</p>
-<p>Your visit may include:</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-3" aria-describedby="what-to-expect-during-a-comprehensive-eye-exam" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-3"><p>Your visit may include:</p>
 <ul><li><strong>Vision testing:</strong> Checks how clearly you see at different distances.</li><li><strong>Prescription testing:</strong> Helps determine whether you need vision correction or an update to your current glasses or contact lens prescription.</li><li><strong>Eye pressure measurement:</strong> Measures the pressure inside your eyes as part of evaluating your eye health.</li><li><strong>Peripheral vision testing:</strong> Checks your side vision and may help identify changes that need further evaluation.</li><li><strong>Slit lamp examination:</strong> Gives Dr. Proske a magnified view of structures at the front of your eyes.</li><li><strong>Retinal and optic nerve evaluation:</strong> Allows the doctor to examine structures at the back of the eye for signs of changes or disease.</li><li><strong>Additional testing when needed:</strong> Depending on your eye health and risk factors, Dr. Proske may recommend dilation, imaging, or other diagnostic tests.</li></ul>
-<p>After the exam, Dr. Proske will explain the findings, answer your questions, and discuss any prescription updates, treatment, or follow-up care that may be recommended.</p>
+<p>After the exam, Dr. Proske will explain the findings, answer your questions, and discuss any prescription updates, treatment, or follow-up care that may be recommended.</p></div>
 <h2 id="how-long-does-a-comprehensive-eye-exam-take">How Long Does a Comprehensive Eye Exam Take?</h2>
 <p>The length of your eye exam depends on your individual needs and the testing required. Factors such as your age, eye health, prescription, medical history, and whether additional testing is needed can all affect how long your visit takes.</p>
 <p>Because every patient is different, Dr. Proske, O.D. will tailor the exam to the care and testing you need. If you need to plan around work, school, or another commitment, contact the Vision Pro team before your appointment for more information about what to expect.</p>
 <h3 id="why-do-children-need-comprehensive-eye-exams">Why Do Children Need Comprehensive Eye Exams?</h3>
 <p>An estimated 10% of preschoolers and 25% of school-aged children have vision problems.</p>
-<p>For this reason it’s important to have your child’s eyes examined from as early as 6 months of age and in their toddler years to determine if their eyes and vision are developing normally.</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-4" aria-describedby="why-do-children-need-comprehensive-eye-exams" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-4"><p>For this reason it’s important to have your child’s eyes examined from as early as 6 months of age and in their toddler years to determine if their eyes and vision are developing normally.</p>
 <p>After that, annual eye exams are recommended for all children ages 5 to 18, to ensure that a refractive error or other vision problem isn’t impacting their learning or academic success.</p>
 <p>If your child wears eyeglasses or contact lenses, they should have an eye exam with a refraction test, at least every year, or according to your optometrist’s instructions.</p>
 <p>Similarly, if your child has a lazy eye or eye turn (strabismus), or is at risk of developing an eye or vision condition, they may need to have their eyes examined more frequently.</p>
 <p>Common risk factors for vision problems include:</p>
-<ul><li>Premature birth</li><li>Developmental delays</li><li>Turned or crossed eyes</li><li>Family history of eye conditions/diseases</li><li>History of eye injury</li><li>Physical illness or disease</li></ul>
+<ul><li>Premature birth</li><li>Developmental delays</li><li>Turned or crossed eyes</li><li>Family history of eye conditions/diseases</li><li>History of eye injury</li><li>Physical illness or disease</li></ul></div>
 <h3 id="eye-exams-for-adults">Eye Exams for Adults</h3>
 <p>Your eyes and vision can change over time, even when you haven’t noticed a difference yourself. Regular eye exams help keep your prescription current while giving Dr. Proske, O.D. an opportunity to monitor your eye health from one visit to the next.</p>
-<p>You may need more frequent exams if you:</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-5" aria-describedby="eye-exams-for-adults" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-5"><p>You may need more frequent exams if you:</p>
 <ul><li>Wear glasses or contact lenses</li><li>Have diabetes, high blood pressure, or other health conditions that can affect the eyes</li><li>Have a personal or family history of eye disease</li><li>Have noticed changes in your vision or new eye symptoms</li><li>Are already being monitored for an eye condition</li></ul>
-<p>Dr. Proske can recommend how often you should return based on your eye health, medical history, and individual risk factors.</p>
+<p>Dr. Proske can recommend how often you should return based on your eye health, medical history, and individual risk factors.</p></div>
 <h3 id="schedule-a-comprehensive-eye-exam-near-you">Schedule a Comprehensive Eye Exam Near You</h3>
 <p>Contact our eye care clinic today to schedule an eye exam near you.</p>
 <h2 id="eye-exam-faqs">Eye Exam FAQs</h2>
@@ -187,7 +192,7 @@
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>
@@ -216,7 +221,8 @@
     <div data-reveal data-reveal-delay="1">
       <p class="eyebrow">Your Spring Eye Doctor</p>
       <h2 id="doctor-band">Meet Your Eye Doctor, <span class="accent">Paul Proske, O.D.</span></h2>
-      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p><p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
+      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p>
+<p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
       <ul class="chips"><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg> Therapeutic Optometrist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"></use></svg> Glaucoma Specialist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg> Open since 2007</li></ul>
       <a class="link-arrow" href="../../our-eye-doctors/">Meet Our Optometrist <svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg></a>
     </div>

@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../../../styles/site.css">
 <link rel="stylesheet" href="../../../styles/motion.css">
 <link rel="stylesheet" href="../../../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -143,18 +143,20 @@
   </div>
 </section><div class="container page-body has-aside"><div class="prose-col"><article class="prose"><h2 id="what-are-high-index-lenses">What are High Index Lenses?</h2>
 <p>A high index lens is a lens that has a higher “index” of refraction. This means it has a greater ability to bend light rays to provide a clear vision for people with stronger prescription glasses. But that’s the technical terminology. What do high index lenses mean for eyeglass wearers?</p>
-<p>Thinner, lighter, and more visually appealing, that’s what! High index lenses are manufactured to be thinner at the edges of the lens and lighter in weight overall.</p>
-<p>High index lenses are a good option for people who have strong prescriptions for myopia—commonly called “nearsightedness” due to a difficulty in focusing on far objects. A high-index lens can bend light rays more while using less material in lenses created for both nearsighted and farsighted people (hyperopia).</p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1" aria-describedby="what-are-high-index-lenses" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-1"><p>Thinner, lighter, and more visually appealing, that’s what! High index lenses are manufactured to be thinner at the edges of the lens and lighter in weight overall.</p>
+<p>High index lenses are a good option for people who have strong prescriptions for myopia—commonly called “nearsightedness” due to a difficulty in focusing on far objects. A high-index lens can bend light rays more while using less material in lenses created for both nearsighted and farsighted people (hyperopia).</p></div>
 <h2 id="no-more-soda-bottle-glasses">No more soda bottle glasses</h2>
-<p>In times past, strong prescriptions meant thicker, heavier lenses, giving some a “glass bottle” appearance. But now, with high index glasses available in thinner, lightweight plastic (as well as slightly heavier glass), lens wearers with stronger prescriptions can get more attractive, yet equally effective, lens products. Because high-index lenses bend light more, anti-reflective (AR) treatment is often recommended as an add-on for optimum clarity of vision.</p>
-<p>For better comfort, better vision, and improved cosmetic appeal, people with strong prescriptions can’t beat high-index lenses.</p></article></div><aside class="aside" aria-label="Page tools"><div class="aside__sticky">
+<p>In times past, strong prescriptions meant thicker, heavier lenses, giving some a “glass bottle” appearance.<span class="mfold__more" id="more-2a"> But now, with high index glasses available in thinner, lightweight plastic (as well as slightly heavier glass), lens wearers with stronger prescriptions can get more attractive, yet equally effective, lens products. Because high-index lenses bend light more, anti-reflective (AR) treatment is often recommended as an add-on for optimum clarity of vision.</span></p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-2a more-2" aria-describedby="no-more-soda-bottle-glasses" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-2"><p>For better comfort, better vision, and improved cosmetic appeal, people with strong prescriptions can’t beat high-index lenses.</p></div></article></div><aside class="aside" aria-label="Page tools"><div class="aside__sticky">
   
   <div class="aside-card"><h2>Patients</h2><div class="quick">
     <a href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book An Appointment</a>
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>
@@ -168,7 +170,8 @@
     <div data-reveal data-reveal-delay="1">
       <p class="eyebrow">Your Spring Eye Doctor</p>
       <h2 id="doctor-band">Meet Your Eye Doctor, <span class="accent">Paul Proske, O.D.</span></h2>
-      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p><p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
+      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p>
+<p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
       <ul class="chips"><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg> Therapeutic Optometrist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"></use></svg> Glaucoma Specialist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg> Open since 2007</li></ul>
       <a class="link-arrow" href="../../../our-eye-doctors/">Meet Our Optometrist <svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg></a>
     </div>

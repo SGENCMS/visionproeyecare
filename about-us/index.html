@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../styles/site.css">
 <link rel="stylesheet" href="../styles/motion.css">
 <link rel="stylesheet" href="../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -142,14 +142,15 @@
     
   </div>
 </section><div class="container page-body has-aside"><div class="prose-col"><article class="prose"><h2 id="eye-exams-in-spring-and-much-more"><strong>Eye Exams in </strong><strong>Spring </strong><strong>&amp; Much More</strong></h2>
-<p>Established in 2007, Vision Pro specializes in caring for all your vision needs. We handle everything from eye exams and hard-to-fit contact lenses, to ocular irritation and minor eye procedures. Dr. Proske specializes in myopia control in children and young adults, and eye disorders caused by diabetes, glaucoma and other health conditions. By staying current with the latest developments in eye care, prescription lenses and advances in contact lens technology, our clinic can provide you with your best vision today—and in the years to come. We take pride in building lasting relationships with our patients, which is why we take the time to get to know you, your vision requirements and your lifestyle needs. <a href="../contact-us/">Contact our eye care clinic</a> today to find out how we can help.</p></article></div><aside class="aside" aria-label="Page tools"><div class="aside__sticky">
+<p>Established in 2007, Vision Pro specializes in caring for all your vision needs. We handle everything from eye exams and hard-to-fit contact lenses, to ocular irritation and minor eye procedures.<span class="mfold__more" id="more-1a"> Dr. Proske specializes in myopia control in children and young adults, and eye disorders caused by diabetes, glaucoma and other health conditions. By staying current with the latest developments in eye care, prescription lenses and advances in contact lens technology, our clinic can provide you with your best vision today—and in the years to come. We take pride in building lasting relationships with our patients, which is why we take the time to get to know you, your vision requirements and your lifestyle needs. <a href="../contact-us/">Contact our eye care clinic</a> today to find out how we can help.</span></p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1a" aria-describedby="eye-exams-in-spring-and-much-more" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button></article></div><aside class="aside" aria-label="Page tools"><div class="aside__sticky">
   
   <div class="aside-card"><h2>Patients</h2><div class="quick">
     <a href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book An Appointment</a>
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>

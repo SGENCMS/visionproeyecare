@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="../../../styles/site.css">
 <link rel="stylesheet" href="../../../styles/motion.css">
 <link rel="stylesheet" href="../../../styles/preview.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>(function(d){d.documentElement.classList.replace('no-js','js');function set(b,o){b.getAttribute('aria-controls').split(' ').forEach(function(i){var m=d.getElementById(i);if(m)m.toggleAttribute('data-open',o)});b.setAttribute('aria-expanded',o?'true':'false');b.firstChild.textContent=o?(b.getAttribute('data-less')||'Show less'):(b.getAttribute('data-more')||'Read more')}d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-mfold-btn]');if(b)set(b,b.getAttribute('aria-expanded')!=='true')});function hash(){var t=location.hash&&d.getElementById(decodeURIComponent(location.hash.slice(1))),m=t&&t.closest('.mfold__more,[data-fold],.list--fold');if(m&&!m.hasAttribute('data-open')){var b=d.querySelector('[aria-controls~="'+m.id+'"]');if(b){set(b,true);t.scrollIntoView()}}}addEventListener('hashchange',hash);d.addEventListener('DOMContentLoaded',hash)})(document)</script>
 
 </head>
 <body class="">
@@ -136,21 +136,24 @@
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../../../">Home</a></li><li><a href="../../../eyeglasses/">Eyeglasses</a></li><li><a href="../../../eyeglasses/prescription-eyeglasses/">Prescription Eyeglasses</a></li><li><span aria-current="page">Bifocal Lenses</span></li></ol></nav>
       <h1>Bifocal Lenses</h1>
       
-      <div class="page-hero__lead"><p>Sometimes our vision fails us at two or even three distinct distances, especially as we age. Bifocal lenses—lenses with two distinct viewing areas—have traditionally been a reliable solution to such a dilemma. (A lens with three distinct viewing areas is called a trifocal.)</p><p>By distinct, we mean there are noticeable lines separating the two different fields of vision within a bifocal lens surface. A slight adjustment to the angle of the head allows wearers to choose which lens area to look through based on the distance of the object they’re trying to see.</p></div>
+      <div class="page-hero__lead"><p>Sometimes our vision fails us at two or even three distinct distances, especially as we age.<span class="mfold__more" id="more-1a"> Bifocal lenses—lenses with two distinct viewing areas—have traditionally been a reliable solution to such a dilemma. (A lens with three distinct viewing areas is called a trifocal.)</span></p>
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-1a more-1" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-1"><p>By distinct, we mean there are noticeable lines separating the two different fields of vision within a bifocal lens surface. A slight adjustment to the angle of the head allows wearers to choose which lens area to look through based on the distance of the object they’re trying to see.</p></div></div>
       <div class="btn-row"><a class="btn" href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book an Appointment</a><a class="btn btn--ghost" href="tel:2817092618"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> Call 281-709-2618</a></div>
     </div>
     
   </div>
 </section><div class="container page-body has-aside"><div class="prose-col"><article class="prose"><p>A farsighted person who also has trouble reading may be prescribed a pair of bifocal reading glasses, for example. The upper section of the lens would correct difficulties seeing objects at distance, and the lower section would assist in reading. (Bifocal glasses date back to the days of Benjamin Franklin!)</p>
-<p>While wearers quickly adjust to the line separating the multiple vision fields, it is a noticeable distraction within the lens itself. This line can be eliminated using a newer lens technology called progressive lenses.</p>
-<p>Progressive lenses incorporate two, three, or more fields of vision within a single lens without noticeable lens lines. Bifocal, trifocal and progressive lenses are all considered “multi-focal” lenses—lenses that provide correction to multiple vision problems.</p></article></div><aside class="aside" aria-label="Page tools"><div class="aside__sticky">
+<button class="mfold__btn" type="button" aria-expanded="false" aria-controls="more-2" data-mfold-btn data-m-ui><span>Read more</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron"></use></svg></button>
+<div class="mfold__more" id="more-2"><p>While wearers quickly adjust to the line separating the multiple vision fields, it is a noticeable distraction within the lens itself. This line can be eliminated using a newer lens technology called progressive lenses.</p>
+<p>Progressive lenses incorporate two, three, or more fields of vision within a single lens without noticeable lens lines. Bifocal, trifocal and progressive lenses are all considered “multi-focal” lenses—lenses that provide correction to multiple vision problems.</p></div></article></div><aside class="aside" aria-label="Page tools"><div class="aside__sticky">
   
   <div class="aside-card"><h2>Patients</h2><div class="quick">
     <a href="https://scheduleyourexam.com/v3/index.php/382/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg> Book An Appointment</a>
     <a href="https://www.crystalpm.com/index.jsp?crystalpmid=382" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-form"></use></svg> Patient History Form</a>
     <a href="https://meetmarlo.com/signin" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"></use></svg> Order Contacts Online</a>
   </div></div>
-  <div class="aside-card"><form data-preview="inert" class="search-form" role="search" action="../../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
+  <div class="aside-card aside-card--search"><form data-preview="inert" class="search-form" role="search" action="../../../search/" method="get"><label for="q-aside">Search:</label><input id="q-aside" type="search" name="q" autocomplete="off"><button class="btn btn--sm" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search</button></form></div>
   <div class="aside-card aside-card--dark"><h2>Visit</h2>
     <p><strong>Vision Pro</strong><br>20920 Kuykendahl Rd., Ste C<br>Spring, TX 77379</p>
     <p>Phone: <a href="tel:2813533937">(281) 353-3937</a></p>
@@ -164,7 +167,8 @@
     <div data-reveal data-reveal-delay="1">
       <p class="eyebrow">Your Spring Eye Doctor</p>
       <h2 id="doctor-band">Meet Your Eye Doctor, <span class="accent">Paul Proske, O.D.</span></h2>
-      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p><p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
+      <p>Meet our optometrist in Spring, Texas. Paul Proske, Therapeutic Optometrist and Glaucoma Specialist, is dedicated with a passion for personalized, preventative care. With over two decades of experience, he’s known for his attentive listening, thorough exams, and genuine concern for each patient’s long-term vision.</p>
+<p>Individualized attention is the foundation of our care, to ensure that your eyes remain healthy. We’re dedicated to optimizing your vision!</p>
       <ul class="chips"><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg> Therapeutic Optometrist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"></use></svg> Glaucoma Specialist</li><li class="chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg> Open since 2007</li></ul>
       <a class="link-arrow" href="../../../our-eye-doctors/">Meet Our Optometrist <svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg></a>
     </div>
